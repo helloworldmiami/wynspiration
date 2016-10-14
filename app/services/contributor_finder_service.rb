@@ -4,7 +4,7 @@ require 'httparty'
 class ContributorFinderService
   def self.find_contributors
 
-    client = Octokit::Client.new(:access_token => "#{ENV["WYNSPR_KEY"]}")
+    client = Octokit::Client.new(:access_token => ENV["WYNSPR_KEY"])
 
     user = client.user
     user.login
